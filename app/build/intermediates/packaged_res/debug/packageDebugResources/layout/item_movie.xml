@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_movie"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clipToPadding="true"
+    android:padding="8dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="true"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- Thumbnail -->
+        <ImageView
+            android:id="@+id/ivMovieThumbnail"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvMovieTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivMovieThumbnail"
+            android:layout_marginStart="8dp"
+            android:text="Movie Title"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            />
+
+        <!-- Studio -->
+        <TextView
+            android:id="@+id/tvMovieStudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMovieTitle"
+            android:layout_alignStart="@id/tvMovieTitle"
+            android:text="Studio" />
+
+        <!-- Rating -->
+        <TextView
+            android:id="@+id/tvCriticsRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMovieStudio"
+            android:layout_alignStart="@id/tvMovieStudio"
+            android:text="Rating: 0/10" />
+
+        <!-- Edit icon -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivEditMovie"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="Edit Movie"
+                android:src="@drawable/baseline_edit_24" />
+
+            <ImageView
+                android:id="@+id/ivDeleteMovie"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/baseline_delete_24" />
+        </LinearLayout>
+
+        <!-- Delete icon -->
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
